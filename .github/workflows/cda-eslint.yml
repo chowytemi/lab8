@@ -2,6 +2,12 @@ name: ESLint Code Analysis
 
 on: [push, pull_request]
 
+
+permissions:
+  contents: read
+  security-events: write  # ✅ REQUIRED to upload SARIF results
+
+
 jobs:
   eslint:
     runs-on: ubuntu-latest
